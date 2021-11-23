@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "app-presupuesto",
+    "slug": "app-presupuesto",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "app-presupuesto"
+}
