@@ -5,6 +5,7 @@ import { StyleSheet } from 'react-native';
 
 import Login from './src/screens/Login';
 import Home from './src/screens/Home';
+import Income from './src/screens/Income';
 
 const Stack = createNativeStackNavigator();
 export default class App extends React.Component{
@@ -12,8 +13,29 @@ export default class App extends React.Component{
         return (
           <NavigationContainer>
             <Stack.Navigator>
-              <Stack.Screen name="Login" component={Login} options={{ headerShown:false }} />
-              <Stack.Screen name="Inicio" component={Home} options={{ headerBackVisible: false }} />
+              <Stack.Screen name="Login" component={Login} options={
+                { 
+                  headerShown:false 
+                }
+              } />
+              <Stack.Screen name="Home" component={Home} options={
+                { 
+                  title:"Mi presupuesto",
+                  headerBackVisible: false, headerStyle: {
+                    backgroundColor: '#008E97',
+                  },
+                  headerTintColor: '#fff',
+                }
+              } />
+              <Stack.Screen name="Income" component={Income} options={
+                { 
+                  title:"Ingresos",
+                  headerStyle: {
+                    backgroundColor: '#008E97',
+                  },
+                  headerTintColor: '#fff',
+                }
+              } />
             </Stack.Navigator>
           </NavigationContainer>
         )

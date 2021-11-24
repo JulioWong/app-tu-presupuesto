@@ -37,7 +37,7 @@ export default function Login({ navigation }) {
 
       <View style={{ marginBottom: 50}}>
         <Button icon="login" mode="contained" onPress={() => {
-          navigation.navigate('Inicio')
+          navigation.navigate('Home')
         }} color="#008E97" style={{ height:40, alignContent:'center', alignItems:'center' }}>
           Ingresar
         </Button>
