@@ -7,7 +7,7 @@ export default function Home({ navigation }) {
     <ScrollView style={ styles.container }>
       <Card style={ { marginBottom: 10, backgroundColor: '#fff5db'} }>
         <Card.Content>
-          <Title>Saldo Actual</Title>
+          <Title>Saldo actual</Title>
           <Paragraph>S/ 5700</Paragraph>
         </Card.Content>
       </Card>

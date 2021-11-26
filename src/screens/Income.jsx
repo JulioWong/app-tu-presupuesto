@@ -2,20 +2,32 @@ import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { FAB, Provider, List } from 'react-native-paper';
 
-export default function Income() {
+export default function Income( { navigation }) {
   return (
     <Provider>
       <ScrollView style={styles.container}>
         <List.Section>
-          <List.Item title="Remuneración mensual" description="S/ 7500"  left={() => <List.Icon icon="arrow-up" />} right={() => <List.Icon icon="minus" />}/>
-          <List.Item title="Alquiler lurin" description="S/ 2499" left={() => <List.Icon icon="arrow-up" />} right={() => <List.Icon icon="minus" />}/>
+          <List.Item 
+            title="Remuneración mensual" 
+            description="S/ 7500"  
+            left={() => <List.Icon icon="arrow-up" />} 
+            right={() => <List.Icon icon="minus" />} 
+            onPress={() => navigation.navigate('CreateIncome')} 
+          />
+          <List.Item 
+            title="Alquiler lurin" 
+            description="S/ 2499" 
+            left={() => <List.Icon icon="arrow-up" />} 
+            right={() => <List.Icon icon="minus" />}
+          />
         </List.Section>
       </ScrollView>
       <FAB
         style={styles.fab}
-        small
+        small={false}
+        color='white'
         icon="plus"
-        onPress={() => console.log('Pressed')}
+        onPress={() => navigation.navigate('CreateIncome')}
       />
     </Provider>
   );
@@ -30,6 +42,6 @@ const styles = StyleSheet.create({
     margin: 16,
     right: 0,
     bottom: 0,
-    backgroundColor: '#e3f7f5'
+    backgroundColor: '#008E97',
   },
 });

@@ -6,6 +6,7 @@ import { StyleSheet } from 'react-native';
 import Login from './src/screens/Login';
 import Home from './src/screens/Home';
 import Income from './src/screens/Income';
+import CreateIncome from './src/screens/CreateIncome';
 
 const Stack = createNativeStackNavigator();
 export default class App extends React.Component{
@@ -30,6 +31,15 @@ export default class App extends React.Component{
               <Stack.Screen name="Income" component={Income} options={
                 { 
                   title:"Ingresos",
+                  headerStyle: {
+                    backgroundColor: '#008E97',
+                  },
+                  headerTintColor: '#fff',
+                }
+              } />
+              <Stack.Screen name="CreateIncome" component={CreateIncome} options={
+                { 
+                  title:"Registrar ingreso",
                   headerStyle: {
                     backgroundColor: '#008E97',
                   },
